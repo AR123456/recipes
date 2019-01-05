@@ -1,2 +1,0 @@
-# recipes
-React Recipe project 
