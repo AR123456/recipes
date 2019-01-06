@@ -155,10 +155,14 @@ function loadData(cb) {
     d3.tsv(
       //link to list of countries as a tab separated value  .tsv
       //TODO there is a miss match with the 2 diget countries somewhere a leading 0 is being generated so not mathcing this list
-      "https://gist.githubusercontent.com/mbostock/4090846/raw/07e73f3c2d21558489604a0bc434b3a5cf41a867/world-country-names.tsv",
+      //putting the names into file is not working cors error it may work if could grab from backend what about putting into an object array ?
+      // "https://gist.githubusercontent.com/mbostock/4090846/raw/07e73f3c2d21558489604a0bc434b3a5cf41a867/world-country-names.tsv",
+      //put thte tsv in a repo and this is working until I get back end set up
+      "https://ar123456.github.io/world-country-names/world-country-names.tsv",
       function(error, countries) {
         if (error) throw error;
         cb(world, countries);
+        console.log("contries  loadData :", countries);
       }
     );
   });

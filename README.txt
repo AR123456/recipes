@@ -1,3 +1,1 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/jorin/pen/YNajXZ.
-
- Demo on how to implement hover effect with d3-geo in a canvas
+Spin the globe choose whats for dinner 
