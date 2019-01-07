@@ -3,20 +3,20 @@
 //
 
 // ms to wait after dragging before auto-rotating
-var rotationDelay = 3000;
+const rotationDelay = 3000;
 // scale of the globe (not the canvas element)
-var scaleFactor = 0.9;
+const scaleFactor = 0.9;
 // autorotation speed
 // TODO make a function to speed up the autorotation  for on drag for 3 seconds after mouse up
 //TODO stop the rotaion on mouse clidk and display the country info
-var degPerSec = 6;
-// start angles
+var degPerSec = 10; //rotation speed of globe
+// start angles positions the glob on its proper axis
 var angles = { x: -20, y: 40, z: 0 };
 // colors
 var colorWater = "#fff";
 var colorLand = "#111";
-var colorGraticule = "#ccc";
-var colorCountry = "#a00";
+var colorGraticule = "#ccc"; //lat and log lines
+var colorCountry = "#a00"; //on click or hover
 
 //
 // Handler
@@ -26,7 +26,7 @@ function enter(country) {
   var country = countryList.find(function(c) {
     return c.id === country.id;
   });
-  current.text((country && country.name) || "");
+  current.text((country && country.name) || ""); //the name of the country get ID from API compare to tsv file and return corresponding name
 }
 
 function leave(country) {
@@ -112,8 +112,8 @@ function render() {
   fill(land, colorLand);
   if (currentCountry) {
     fill(currentCountry, colorCountry);
-    //TOTDO looks like the id for 2 diget numbers has a leading 0 which is why Australia is not working need to figure out where the extra 0 is coming from and trim it off
-    console.log(currentCountry.id);
+
+    // console.log(currentCountry.id);
   }
 }
 
@@ -201,7 +201,7 @@ function mousemove() {
     return;
   }
   currentCountry = c;
-  // in this console.log the id has the leading 0
+  // in this console.log the id from the API
   console.log("This is the c value: ", c.id);
   render();
   enter(c);
