@@ -147,7 +147,7 @@ function loadData(cb) {
   // looks like this links to this site via unpkg https://www.npmjs.com/package/world-atlas
   // https://github.com/topojson/topojson-specification/blob/master/README.md#21-topology-objects
 
-  d3.json("https://unpkg.com/world-atlas@1/world/110m.json", function(
+  d3.json("https://unpkg.com/world-atlas@1.1.4/world/110m.json", function(
     error,
     world
   ) {
@@ -245,4 +245,15 @@ loadData(function(world, cList) {
   window.addEventListener("resize", scale);
   scale();
   autorotate = d3.timer(rotate);
+});
+
+// ***********For inertia use this package  https://www.npmjs.com/package/d3-inertia***
+// the code below  comes from this example https://bl.ocks.org/Fil/63366253a5d2f00640c15b096c29a38c
+
+var inertia = d3.geoInertiaDrag(canvas, render);
+d3.timer(function(e) {
+  if (inertia.timer) return;
+  var rotate = projection.rotate();
+  projection.rotate([rotate[0] + 0.12, rotate[1], rotate[2]]);
+  render();
 });
