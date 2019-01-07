@@ -1,5 +1,5 @@
-// This is the versor from this site that is used to generate the globe.  Looks like the authors site to host the JS file
-// Version 0.0.0. Copyright 2017 Mike Bostock.
+//local copy of the d3 site sample versor to generate the globe
+
 (function(global, factory) {
   typeof exports === "object" && typeof module !== "undefined"
     ? (module.exports = factory())
