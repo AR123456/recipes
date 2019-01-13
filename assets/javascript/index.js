@@ -256,5 +256,6 @@ d3.timer(function(e) {
   var rotate = projection.rotate();
   projection.rotate([rotate[0] + 0.12, rotate[1], rotate[2]]);
   render();
+
   // TODO need a way to stop the inertia rotation on a click or double click . Right now it spins without stopping. Need a way to stop it so country name display and eventual recipe stay on the
 });
