@@ -9,21 +9,27 @@ const scaleFactor = 0.9;
 // autorotation speed
 // TODO make a function to speed up the autorotation  for on drag for 3 seconds after mouse up
 //TODO stop the rotaion on mouse clidk and display the country info
-var degPerSec = 10; //rotation speed of globe
+var degPerSec = 30; //rotation speed of globe
 // start angles positions the glob on its proper axis
-var angles = { x: -20, y: 40, z: 0 };
+var angles = {
+  x: -20,
+  y: 40,
+  z: 0
+};
 // colors
 var colorWater = "#fff";
 var colorLand = "#111";
 var colorGraticule = "#ccc"; //lat and log lines
 var colorCountry = "#a00"; //on click or hover
+// add line color of country boundary lines 
+var countriesBound = "#fff" // the color of the country lines when I get them to appear 
 
 //
 // Handler
 //
 
 function enter(country) {
-  var country = countryList.find(function(c) {
+  var country = countryList.find(function (c) {
     return c.id === country.id;
   });
   current.text((country && country.name) || ""); //the name of the country get ID from API compare to tsv file and return corresponding name
@@ -40,7 +46,9 @@ function leave(country) {
 var current = d3.select("#current");
 var canvas = d3.select("#globe");
 var context = canvas.node().getContext("2d");
-var water = { type: "Sphere" };
+var water = {
+  type: "Sphere"
+};
 var projection = d3.geoOrthographic().precision(0.1);
 var graticule = d3.geoGraticule10();
 var path = d3.geoPath(projection).context(context);
@@ -55,6 +63,8 @@ var land, countries;
 var countryList;
 var autorotate, now, diff, roation;
 var currentCountry;
+// TODO need to figure out how to do this.... need country boundarys 
+// var countryBoundary; 
 
 //
 // Functions
@@ -110,6 +120,9 @@ function render() {
   fill(water, colorWater);
   stroke(graticule, colorGraticule);
   fill(land, colorLand);
+  //  created a stroke here it put the outline of the conttries on the map. 
+  stroke(countries, countriesBound);
+
   if (currentCountry) {
     fill(currentCountry, colorCountry);
 
@@ -147,7 +160,7 @@ function loadData(cb) {
   // looks like this links to this site via unpkg https://www.npmjs.com/package/world-atlas
   // https://github.com/topojson/topojson-specification/blob/master/README.md#21-topology-objects
 
-  d3.json("https://unpkg.com/world-atlas@1.1.4/world/110m.json", function(
+  d3.json("https://unpkg.com/world-atlas@1/world/110m.json", function (
     error,
     world
   ) {
@@ -159,7 +172,7 @@ function loadData(cb) {
       // "https://gist.githubusercontent.com/mbostock/4090846/raw/07e73f3c2d21558489604a0bc434b3a5cf41a867/world-country-names.tsv",
       //put thte tsv in a repo and this is working until I get back end set up
       "https://ar123456.github.io/world-country-names/world-country-names.tsv",
-      function(error, countries) {
+      function (error, countries) {
         if (error) throw error;
         cb(world, countries);
         console.log("contries  loadData :", countries);
@@ -209,11 +222,11 @@ function mousemove() {
 
 function getCountry(event) {
   var pos = projection.invert(d3.mouse(event));
-  return countries.features.find(function(f) {
-    return f.geometry.coordinates.find(function(c1) {
+  return countries.features.find(function (f) {
+    return f.geometry.coordinates.find(function (c1) {
       return (
         polygonContains(c1, pos) ||
-        c1.find(function(c2) {
+        c1.find(function (c2) {
           return polygonContains(c2, pos);
         })
       );
@@ -230,14 +243,15 @@ setAngles();
 canvas
   .call(
     d3
-      .drag()
-      .on("start", dragstarted)
-      .on("drag", dragged)
-      .on("end", dragended)
+    .drag()
+    .on("start", dragstarted)
+    .on("drag", dragged)
+    .on("end", dragended)
   )
   .on("mousemove", mousemove);
 
-loadData(function(world, cList) {
+loadData(function (world, cList) {
+
   land = topojson.feature(world, world.objects.land);
   countries = topojson.feature(world, world.objects.countries);
   countryList = cList;
@@ -245,17 +259,4 @@ loadData(function(world, cList) {
   window.addEventListener("resize", scale);
   scale();
   autorotate = d3.timer(rotate);
-});
-
-// ***********For inertia use this package  https://www.npmjs.com/package/d3-inertia***
-// the code below  comes from this example https://bl.ocks.org/Fil/63366253a5d2f00640c15b096c29a38c
-
-var inertia = d3.geoInertiaDrag(canvas, render);
-d3.timer(function(e) {
-  if (inertia.timer) return;
-  var rotate = projection.rotate();
-  projection.rotate([rotate[0] + 0.12, rotate[1], rotate[2]]);
-  render();
-
-  // TODO need a way to stop the inertia rotation on a click or double click . Right now it spins without stopping. Need a way to stop it so country name display and eventual recipe stay on the
 });
