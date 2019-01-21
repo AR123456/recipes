@@ -9,20 +9,22 @@ const scaleFactor = 0.9;
 // autorotation speed
 // TODO make a function to speed up the autorotation  for on drag for 3 seconds after mouse up
 //TODO stop the rotaion on mouse clidk and display the country info
-var degPerSec = 30; //rotation speed of globe
+const degPerSec = 50; //rotation speed of globe
 // start angles positions the glob on its proper axis
-var angles = {
-  x: -20,
+const angles = {
+  // x: -20, original for up down 
+  x: -13,
   y: 40,
-  z: 0
+  // z:0, original
+  z: 23.5
 };
 // colors
-var colorWater = "#fff";
-var colorLand = "#111";
-var colorGraticule = "#ccc"; //lat and log lines
-var colorCountry = "#a00"; //on click or hover
+const colorWater = "#fff";
+const colorLand = "#111";
+const colorGraticule = "#ccc"; //lat and log lines
+const colorCountry = "#a00"; //on click or hover
 // add line color of country boundary lines 
-var countriesBound = "#fff" // the color of the country lines when I get them to appear 
+const countriesBound = "#fff" // the color of the country lines when I get them to appear 
 
 //
 // Handler
@@ -43,34 +45,31 @@ function leave(country) {
 // Variables
 //
 
-var current = d3.select("#current");
-var canvas = d3.select("#globe");
-var context = canvas.node().getContext("2d");
-var water = {
+const current = d3.select("#current");
+const canvas = d3.select("#globe");
+const context = canvas.node().getContext("2d");
+const water = {
   type: "Sphere"
 };
-var projection = d3.geoOrthographic().precision(0.1);
-var graticule = d3.geoGraticule10();
-var path = d3.geoPath(projection).context(context);
-var v0; // Mouse position in Cartesian coordinates at start of drag gesture.
-var r0; // Projection rotation as Euler angles at start.
-var q0; // Projection rotation as versor at start.
-var lastTime = d3.now();
+const projection = d3.geoOrthographic().precision(0.1);
+const graticule = d3.geoGraticule10();
+const path = d3.geoPath(projection).context(context);
+let v0; // Mouse position in Cartesian coordinates at start of drag gesture.
+let r0; // Projection rotation as Euler angles at start.
+let q0; // Projection rotation as versor at start.
+let lastTime = d3.now();
 // TODO what is this var doing
-var degPerMs = degPerSec / 1000;
-var width, height;
-var land, countries;
+const degPerMs = degPerSec / 1000;
+let width, height;
+let land, countries;
 var countryList;
 var autorotate, now, diff, roation;
 var currentCountry;
-// TODO need to figure out how to do this.... need country boundarys 
-// var countryBoundary; 
-
 //
 // Functions
 //
 
-function setAngles() {
+setAngles = () => {
   var rotation = projection.rotate();
   rotation[0] = angles.y;
   rotation[1] = angles.x;
