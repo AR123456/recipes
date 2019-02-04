@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta charset="UTF-8" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
     <title>D3 canvas globe with country hover</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
     <h2>Spin the Globe Find Dinner</h2>
     <h2 id="current"></h2>
+
     <canvas id="globe"></canvas>
     <!-- Using ajax to make API calls  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
@@ -21,8 +51,13 @@
     <!-- This is a link to a code block from  https://bl.ocks.org/ look at putting this code into the JS vs this link  -->
     <!-- link to the page that Mike Bostock authored called "World Tour" https://bl.ocks.org/mbostock/4183330 -->
     <!-- the link to the code block in turn links out to more JS files on that site.  -->
-    <script src="./js/versor.js"></script>
+    <!-- <script src="./js/versor.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/combine/npm/versor,npm/d3-inertia"></script>
+    <!-- https://bl.ocks.org/Fil/63366253a5d2f00640c15b096c29a38c -->
+    <!-- TODO Find out why the attached file is not working but the url above is  -->
+    <!-- <script src=".js/3d-inertia.js"></script> -->
+    <!-- <script src="./js/3d-inertia.js"></script> -->
 
-    <script src="js/index.js"></script>
+    <script src="./assets/javascript/index.js"></script>
   </body>
 </html>
