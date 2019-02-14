@@ -19,7 +19,8 @@ var angles = {
   z: 23
 };
 // colors
-const colorWater = "#81f3cd";
+// const colorWater = "#81f3cd";
+const colorWater = " rgb(32, 137, 236)";
 var colorLand = "#111";
 var colorGraticule = "#ccc"; //lat and log lines
 var colorCountry = "#a00"; //on click or hover
@@ -32,19 +33,31 @@ function enter(country) {
   var country = countryList.find(function(c) {
     return c.id === country.id;
   });
-  current.text((country && country.name) || ""); //the name of the country get ID from API compare to tsv file and return corresponding name
-  console.log(country.name);
+  current.text((country && country.name) || ""); //the name of the country get ID from API compare to tsv file and return corresponding name or nothing
+
+  // console.log(country.name);
+
+  // addEventListener("click", recipeCountry);
+  addEventListener("click", function() {
+    alert("clicked ");
+  });
 }
 
 function leave(country) {
   current.text("");
 }
 
+// function recipeCountry() {
+//   console.log("Grabbed the click");
+//   alert("clicked ");
+
+// }
 //
 // Variables
 //
 
 var current = d3.select("#current");
+
 var canvas = d3.select("#globe");
 var context = canvas.node().getContext("2d");
 var water = { type: "Sphere" };
@@ -122,7 +135,7 @@ function render() {
   if (currentCountry) {
     fill(currentCountry, colorCountry);
 
-    // console.log(currentCountry.id);
+    // console.log(currentCountry.name);
   }
 }
 
