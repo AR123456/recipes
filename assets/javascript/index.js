@@ -15,7 +15,7 @@ var angles = {
   //original x:-20 this is for up down
   x: -13,
   y: 40,
-  //z:0  origina lthis is tilt of globe
+  //z:0  original this is tilt of globe
   z: 23
 };
 // colors
@@ -35,11 +35,15 @@ function enter(country) {
   });
   current.text((country && country.name) || ""); //the name of the country get ID from API compare to tsv file and return corresponding name or nothing
 
-  // console.log(country.name);
+  // console.log("on mouse over country name ", country.name);
 
-  // addEventListener("click", recipeCountry);
   addEventListener("click", function() {
-    alert("clicked ");
+    // this is finding the clicked on counter and logs the correct id of that country
+
+    console.log(
+      "country name clicked from the add eventlistener",
+      country.name
+    );
   });
 }
 
@@ -47,12 +51,6 @@ function leave(country) {
   current.text("");
 }
 
-// function recipeCountry() {
-//   console.log("Grabbed the click");
-//   alert("clicked ");
-
-// }
-//
 // Variables
 //
 
@@ -134,8 +132,6 @@ function render() {
   stroke(countries, countriesBound);
   if (currentCountry) {
     fill(currentCountry, colorCountry);
-
-    // console.log(currentCountry.name);
   }
 }
 
@@ -225,7 +221,7 @@ function mousemove() {
   currentCountry = c;
   // in this console.log the id from the API
   // console.log("This is the c value: ", c.id);
-  // console.log(currentCountry);
+  // console.log("this is the current country ", currentCountry);
   render();
   enter(c);
 }
