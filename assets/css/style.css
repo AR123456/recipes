@@ -11,11 +11,14 @@ body {
 
 #current {
   position: absolute;
-  color: white;
+  color: pink;
   font-family: sans-serif;
   margin-left: 4%;
   margin-top: 4%;
 }
 .color {
   background: #81f3cd;
+}
+h2 {
+  color: pink;
 }

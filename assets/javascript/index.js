@@ -22,9 +22,9 @@ var angles = {
 // const colorWater = "#81f3cd";
 const colorWater = " rgb(32, 137, 236)";
 var colorLand = "#111";
-var colorGraticule = "#ccc"; //lat and log lines
-var colorCountry = "#a00"; //on click or hover
-var countriesBound = "#fff"; // the color of the country lines when I get them to appear
+var colorGraticule = "pink"; //lat and log lines
+var colorCountry = "aqua"; //on click or hover
+var countriesBound = "pink"; // the color of the country lines
 //
 // Handler
 //
