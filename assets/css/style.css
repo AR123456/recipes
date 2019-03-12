@@ -6,6 +6,7 @@ body {
 }
 
 #globe {
+  filter: drop-shadow(0 0 0.95rem #44ddb7);
   cursor: move;
 }
 
