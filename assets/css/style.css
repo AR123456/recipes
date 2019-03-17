@@ -23,3 +23,13 @@ body {
 h2 {
   color: pink;
 }
+#recipe-div {
+  background: whitesmoke;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-right: 10%;
+  margin-bottom: 4%;
+}
+#recipe-div p {
+  color: black;
+}

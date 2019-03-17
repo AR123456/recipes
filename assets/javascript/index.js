@@ -3,13 +3,13 @@
 //
 
 // ms to wait after dragging before auto-rotating
-const rotationDelay = 3000;
+const rotationDelay = 300;
 // scale of the globe (not the canvas element)/ this makes the scale bigger
 const scaleFactor = 0.9;
 // autorotation speed
 // TODO make a function to speed up the autorotation  for on drag for 3 seconds after mouse up
 //TODO stop the rotaion on mouse clidk and display the country info
-var degPerSec = 30; //rotation speed of globe
+var degPerSec = 10; //rotation speed of globe
 // start angles positions the globe on its proper axis
 var angles = {
   //original x:-20 this is for up down
@@ -40,11 +40,31 @@ function enter(country) {
   addEventListener("click", function() {
     // this is finding the clicked on counter and logs the correct id of that country
 
-    console.log(
-      "country name clicked from the add eventlistener",
-      country.name
-    );
+    // console.log(
+    //   "country name clicked from the add eventlistener",
+    //   country.name
+    // );
+    stopRotation();
+    getRecipeCountry();
   });
+}
+
+/// find out why sometimes this is not saving to local storage and sometimes the local storage is different on recipe page than globe page  ????????????????????
+function getRecipeCountry() {
+  // document.getElementById("current").innerHTML = "you clicked me ";
+  // document.getElementById("current").style.color = "red";
+  // document.getElementById("current").value = document.getElementById(
+  //   "clicked"
+  // ).value;
+
+  ///this is pickeing up the hovered on countery , need to get the one clicked on
+  var searchMe = document.getElementById("current").innerText;
+
+  // console.log("This is searchMe ", searchMe);
+  var html = "<p> Go to recipes" + searchMe + "<p>";
+  document.querySelector("#clicked").innerHTML = html;
+  localStorage.setItem("searchMe", searchMe);
+  // document.getElementById("clicked").
 }
 
 function leave(country) {
