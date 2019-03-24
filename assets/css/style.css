@@ -1,0 +1,41 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* background: rgb(32, 137, 236); */
+  background: grey;
+}
+
+#globe {
+  filter: drop-shadow(0 0 0.95rem white);
+  cursor: move;
+}
+
+#current {
+  position: absolute;
+  color: black;
+  font-family: sans-serif;
+  margin-left: 4%;
+  padding-top: 4%;
+  margin-top: 4%;
+}
+.color {
+  background: grey;
+}
+h2 {
+  color: black;
+}
+#recipe-div {
+  background: whitesmoke;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-right: 10%;
+  margin-bottom: 4%;
+}
+#recipe-div p {
+  color: black;
+  padding-bottom: 2%;
+}
+a {
+  color: black;
+}
