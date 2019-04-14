@@ -28,6 +28,10 @@ $.ajax({
   for (let i = 0; i < response.hits.length; i++) {
     let gifDiv = $("<div>");
 
+    let image = $("<img class ='gif'>");
+
+    image.attr("src", response.hits[i].recipe.image);
+
     let p = $("<p>").append(
       "<a target ='_blank' href='" +
         response.hits[i].recipe.url +
@@ -35,9 +39,6 @@ $.ajax({
         response.hits[i].recipe.label +
         "</a>"
     );
-
-    let image = $("<img class ='gif'>");
-    image.attr("src", response.hits[i].recipe.image);
 
     gifDiv.append(p);
     gifDiv.append(image);

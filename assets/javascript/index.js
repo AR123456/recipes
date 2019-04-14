@@ -111,7 +111,7 @@ function scale() {
   height = document.documentElement.clientHeight;
   canvas.attr("width", width).attr("height", height);
   projection
-    .scale((scaleFactor * Math.min(width, height)) / 2)
+    .scale((scaleFactor * Math.min(width, height)) / 1.9)
     .translate([width / 2, height / 2]);
   render();
 }
