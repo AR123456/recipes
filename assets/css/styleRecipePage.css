@@ -1,0 +1,70 @@
+html,
+body {
+  height: 100%;
+  background: #04111f;
+  background: -moz-linear-gradient(top, #000000 10%, #04111f 50%);
+  background: -webkit-linear-gradient(top, #000000 10%, #04111f 50%);
+  background: linear-gradient(to bottom, #000000 10%, #04111f 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#04111f',GradientType=0 );
+
+  color: #fff;
+  margin: 0px;
+  padding: 0px;
+}
+#recipe-div {
+  /* background: whitesmoke; */
+  margin-left: 2%;
+  margin-top: 2%;
+  /* margin-right: 10%; */
+  margin-bottom: 4%;
+}
+#footer {
+  /* position: absolute; */
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+#mapwrap {
+  width: 100%;
+  height: 300px;
+}
+
+#map {
+  position: absolute;
+  width: 100%;
+  height: 92%;
+  margin-top: 8%;
+}
+
+#mapmask {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background: transparent
+    url("http://www.doluscollective.com/images/atmosphere.png") 50% 0px
+    no-repeat;
+  background-size: 100% auto;
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  #mapwrap,
+  #mapmask,
+  svg,
+  #footer {
+    height: 200px;
+  }
+}
+
+@media (max-height: 600px) and (min-width: 400px) {
+  #mapwrap,
+  #mapmask,
+  svg,
+  #footer {
+    height: 200px;
+  }
+}
