@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%;
+  height: 3000px;
   background: #04111f;
   background: -moz-linear-gradient(top, #000000 10%, #04111f 50%);
   background: -webkit-linear-gradient(top, #000000 10%, #04111f 50%);
@@ -12,6 +12,7 @@ body {
   padding: 0px;
 }
 #recipe-div {
+  height: 100%;
   /* background: whitesmoke; */
   margin-left: 2%;
   margin-top: 2%;
