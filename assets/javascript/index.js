@@ -2,8 +2,8 @@
 // Configuration
 //
 
-// ms to wait after dragging before auto-rotating
-const rotationDelay = 300;
+// ms to wait after dragging before auto-rotating have upped this to 30 sec for better user experiance
+const rotationDelay = 3000;
 // scale of the globe (not the canvas element)/ this makes the scale bigger
 const scaleFactor = 0.9;
 // autorotation speed
@@ -20,10 +20,10 @@ var angles = {
 };
 // colors
 // const colorWater = "#81f3cd";
-const colorWater = "grey";
-var colorLand = "#111";
-var colorGraticule = "black"; //lat and log lines
-var colorCountry = "grey"; //on click or hover
+const colorWater = "#000204"; //#000204
+var colorLand = "#57BB86";
+var colorGraticule = "grey"; //lat and log lines
+var colorCountry = "#ff3796"; //on click or hover
 var countriesBound = "white"; // the color of the country lines
 //
 // Handler
@@ -61,7 +61,7 @@ function getRecipeCountry() {
   var searchMe = document.getElementById("current").innerText;
 
   // console.log("This is searchMe ", searchMe);
-  var html = "<p> Go to recipes" + searchMe + "<p>";
+  var html = "<p> Go to recipes from: " + searchMe + "<p>";
   document.querySelector("#clicked").innerHTML = html;
   localStorage.setItem("searchMe", searchMe);
   // document.getElementById("clicked").

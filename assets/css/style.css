@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   /* background: rgb(32, 137, 236); */
-  background: grey;
+  background: #000204;
 }
 
 #globe {
@@ -13,7 +13,7 @@ body {
 
 #current {
   position: absolute;
-  color: black;
+  color: white;
   font-family: sans-serif;
   margin-left: 4%;
   padding-top: 4%;
@@ -23,7 +23,7 @@ body {
   background: grey;
 }
 h2 {
-  color: black;
+  color: white;
 }
 #recipe-div {
   background: whitesmoke;
@@ -33,9 +33,13 @@ h2 {
   margin-bottom: 4%;
 }
 #recipe-div p {
-  color: black;
+  color: white;
   padding-bottom: 2%;
 }
 a {
-  color: black;
+  color: white;
 }
+
+/* green color is #57BB86 */
+/* black color is #000204 */
+/* pink color is #ff3796 */

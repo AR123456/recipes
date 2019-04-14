@@ -39,9 +39,8 @@ $.ajax({
         response.hits[i].recipe.label +
         "</a>"
     );
-
-    gifDiv.append(p);
     gifDiv.append(image);
+    gifDiv.append(p);
 
     $("#recipe-div").prepend(gifDiv);
   }
