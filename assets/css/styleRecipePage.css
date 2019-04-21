@@ -23,6 +23,16 @@ body {
   color: white;
   padding-bottom: 2%;
 }
+#nut-div {
+  height: 200px;
+  width: 200px;
+
+  background: whitesmoke;
+  margin-left: 2%;
+  margin-top: 2%;
+  /* margin-right: 10%; */
+  margin-bottom: 4%;
+}
 a {
   color: #ff3796;
 }
@@ -53,9 +63,7 @@ a {
   position: absolute;
   width: 100%;
   height: 300px;
-  background: transparent
-    url("http://www.doluscollective.com/images/atmosphere.png") 50% 0px
-    no-repeat;
+  background: transparent url("../images/atmosphere.png") 50% 0px no-repeat;
   background-size: 100% auto;
   z-index: 1;
 }

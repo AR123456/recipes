@@ -1,7 +1,6 @@
 //
 // Configuration
 //
-// add code to handle a double click on Iphones https://www.codicode.com/art/easy_way_to_add_touch_support_to_your_website.aspx
 
 // ms to wait after dragging before auto-rotating have upped this to 30 sec for better user experiance
 const rotationDelay = 3000;
@@ -37,16 +36,18 @@ function enter(country) {
   current.text((country && country.name) || ""); //the name of the country get ID from API compare to tsv file and return corresponding name or nothing
 
   // console.log("on mouse over country name ", country.name);
-
-  //when this was a dblclick it did not work on Iphone
   addEventListener("click", function() {
+    stopRotation();
+  });
+
+  addEventListener("dblclick", function() {
     // this is finding the clicked on counter and logs the correct id of that country
 
     // console.log(
     //   "country name clicked from the add eventlistener",
     //   country.name
     // );
-    stopRotation();
+    // stopRotation();
     getRecipeCountry();
   });
 }
