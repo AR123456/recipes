@@ -7,9 +7,13 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+
+    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
     />
     <!-- <link
       rel="stylesheet"
@@ -31,9 +35,12 @@
   <body>
     <div class="container">
       <h2>Pick your Recipe</h2>
-      <!-- <h2 id="current"></h2> -->
-      <div class="row" id="recipe-div">
-        <!--  here return from the JSON response recipe array  items   -->
+      <div class="row">
+        <div class="col-sm" id="recipe-div"></div>
+        <div class="col-sm">
+         
+          <div class="canvas"></div>
+        </div>
       </div>
     </div>
 
@@ -45,8 +52,15 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.js"></script> -->
+
+    <script src="https://d3js.org/d3.v5.js"></script>
     <script src="./assets/javascript/mapbox-gl.js"></script>
-    <script src="./assets/javascript/app.js"></script>
     <script src="./assets/javascript/footer.js"></script>
+  <!-- local js file  -->
+    <script src="./assets/javascript/app.js"></script>
+</body>
   </body>
+</html>
+
+
 </html>
