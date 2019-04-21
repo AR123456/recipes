@@ -12,7 +12,7 @@ const queryURL =
   "https://api.edamam.com/search?q=" +
   searchTerm +
   "&app_id=7f505e41&app_key=c431472652d71ea7fad63f915856366d&from=0&to=3&health=alcohol-free";
-
+// consider refactoring to use axios which can work well with node js when back end is added
 $.ajax({
   url: queryURL,
   method: "GET"
@@ -50,24 +50,44 @@ $.ajax({
     $("#recipe-div").prepend(gifDiv);
   }
 });
-
 // //////////////////////code for the nuriant rendering with d3////////////
 
 const data = [
   //root category the parent of the blog so parent is empty
-  { name: "calories", parent: "", amount: 2499.628483072875 }, // recipe.calories
+  {
+    name: "calories",
+    parent: "",
+    amount: 100
+    // amount: response.hits[i].recipe.calories
+  }, // recipe.calories
   //three sub categories FAT , CHOCDF and PROCNT - their parent is calories
-  { name: "FAT", parent: "calories", amount: 174.35943285279748 }, // recipe.totalNutrients.FAT.quantity *8
-  { name: "CHOCDF", parent: "calories", amount: 3.2633136069187505 }, //recipe.totalNutrients.CHCCDF.quantity*4
-  { name: "PROCNT", parent: "calories", amount: 215.66905387248374 }, //recipe.totalNutrients.PROCNT.quantity*4
+  {
+    name: "FAT",
+    parent: "calories",
+    amount: 33
+    // amount: response.hits[i].recipe.totalNutrients.FAT.quantity * 8
+  }, // recipe.totalNutrients.FAT.quantity *8
+  {
+    name: "CHOCDF",
+    parent: "calories",
+    amount: 33
+    // amount: response.hits[i].recipe.totalNutrients.CHOCDF.quantity * 4
+  }, //recipe.totalNutrients.CHCCDF.quantity*4
+  {
+    name: "PROCNT",
+    parent: "calories",
+    amount: 33
+    // amount: response.hits[i].recipe.totalNutrients.PROCNT.quantity * 4
+  }, //recipe.totalNutrients.PROCNT.quantity*4
 
-  { name: "Fat", parent: "FAT", amount: 40 }, // (FAT.quantity / ("FAT.quantity" +CHOCDR.quantity + PROCNT.quantity))*100      174/392
-  //
+  { name: "Fat", parent: "FAT", amount: 33 }, //
+  //((response.hits[i].recipe.totalNutrients.FAT.quantity * 8)/response.hits[i].recipe.calories)*100
   //then sub categores of each sub CHOCDF amount is the amount of each
-  { name: "Carbs", parent: "CHOCDF", amount: 20 }, // (CHCCDF.quantity / ("FAT.quantity" +CHOCDR.quantity + PROCNT.quantity))*100
+  { name: "Carbs", parent: "CHOCDF", amount: 33 }, //
+  // ((response.hits[i].recipe.totalNutrients.CHOCDF.quantity * 4/response.hits[i].recipe.calories)*100
 
-  //then sub categores of each sub PROCNT amount is the amount of each
-  { name: "Protein", parent: "PROCNT", amount: 20 } // (PROCNT.quantity / ("FAT.quantity" +CHOCDR.quantity + PROCNT.quantity))*100
+  { name: "Protein", parent: "PROCNT", amount: 33 } // (PROCNT.quantity / ("FAT.quantity" +CHOCDR.quantity + PROCNT.quantity))*100
+  // ((response.hits[i].recipe.totalNutrients.PROCNT.quantity * 4)/response.hits[i].recipe.calories)*100
 ];
 
 // create the svg
