@@ -36,6 +36,9 @@ body {
 a {
   color: #ff3796;
 }
+svg {
+  filter: drop-shadow(0 0 0.95rem white);
+}
 
 #footer {
   /* position: absolute; */

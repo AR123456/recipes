@@ -155,7 +155,7 @@ $.ajax({
     //add data to a selection of group elements - each bubble will eventualy be its own group  with a circe and text to output name . Both bubble and circe will have  access to the data that is joined to it in the group
 
     // adding logic for an ordinal scale to apply color
-    const color = d3.scaleOrdinal(["#d1c4e9", "#b39ddb", "#9575cd"]);
+    const color = d3.scaleOrdinal(["#65D8A0", "#52B07C", "#000000"]);
     // use the depth property to pass through the ordinal scale
     // the higher the depth the lower in the tree of data
     /////////////////
