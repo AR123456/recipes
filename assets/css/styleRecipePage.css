@@ -67,7 +67,7 @@ svg {
 @media (max-width: 800px) {
   #mapwrap,
   #mapmask,
-  svg,
+  /* svg, */
   #footer {
     height: 200px;
   }
@@ -76,7 +76,7 @@ svg {
 @media (max-height: 600px) and (min-width: 400px) {
   #mapwrap,
   #mapmask,
-  svg,
+  /* svg, */
   #footer {
     height: 200px;
   }
