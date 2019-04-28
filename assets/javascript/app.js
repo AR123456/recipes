@@ -1,5 +1,6 @@
 // Need to get searchMe var to this page and use in to search the API
 // find out what the syntax is for 2 word search terms and convert using regex
+//TODO look at way to take "searchMe and convert the country name in it to a better recipe search term for the API " for example Argentina is Argentine - is there a Wiki API ? to get ths search terms from the WIKI lis t of "dishes" see this example https://en.wikipedia.org/wiki/List_of_Argentine_dishes
 
 var searchTerm = localStorage.getItem("searchMe");
 // var searchTerm = localStorage.getItem("searchMe");
@@ -140,9 +141,10 @@ $.ajax({
     /// generate the bubble pack which is a d3 function
     const pack = d3
       .pack()
-      //tack on the size of the bubble pack
+
+      //tack on the size of the bubble pack, the big circle
       .size([295, 295])
-      // add padding size , the distance between circles
+      // add padding size , the distance between circles within the circles withn the big circe
       .padding(5);
 
     // console.log(pack(rootNode));
