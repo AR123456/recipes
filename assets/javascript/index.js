@@ -37,31 +37,16 @@ function enter(country) {
 
   // console.log("on mouse over country name ", country.name);
   addEventListener("click", function() {
+    console.log("first click");
     stopRotation();
+    getAnotherClick();
   });
-
-  addEventListener("dblclick", function() {
-    // this is finding the clicked on counter and logs the correct id of that country
-
-    // console.log(
-    //   "country name clicked from the add eventlistener",
-    //   country.name
-    // );
-    // stopRotation();
-    getRecipeCountry();
-  });
-  // for the ios and other touch screens
-  addEventListener("long-press", function() {
-    // this is finding the clicked on counter and logs the correct id of that country
-
-    // console.log(
-    //   "country name clicked from the add eventlistener",
-    //   country.name
-    // );
-    // stopRotation();
-    console.log("long press ! ");
-    getRecipeCountry();
-  });
+  function getAnotherClick() {
+    addEventListener("click", function() {
+      console.log("this is the second click ");
+      getRecipeCountry();
+    });
+  }
 }
 
 /// find out why sometimes this is not saving to local storage and sometimes the local storage is different on recipe page than globe page  ????????????????????
