@@ -23,20 +23,13 @@ body {
   color: white;
   padding-bottom: 2%;
 }
-#nut-div {
-  height: 200px;
-  width: 200px;
 
-  background: whitesmoke;
-  margin-left: 2%;
-  margin-top: 2%;
-  /* margin-right: 10%; */
-  margin-bottom: 4%;
-}
 a {
   color: #ff3796;
 }
 svg {
+  border: 1px solid red;
+
   filter: drop-shadow(0 0 0.95rem white);
 }
 

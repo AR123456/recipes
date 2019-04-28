@@ -50,6 +50,18 @@ function enter(country) {
     // stopRotation();
     getRecipeCountry();
   });
+  // for the ios and other touch screens
+  addEventListener("long-press", function() {
+    // this is finding the clicked on counter and logs the correct id of that country
+
+    // console.log(
+    //   "country name clicked from the add eventlistener",
+    //   country.name
+    // );
+    // stopRotation();
+    console.log("long press ! ");
+    getRecipeCountry();
+  });
 }
 
 /// find out why sometimes this is not saving to local storage and sometimes the local storage is different on recipe page than globe page  ????????????????????
@@ -61,12 +73,12 @@ function getRecipeCountry() {
   // ).value;
 
   ///this is pickeing up the hovered on countery , need to get the one clicked on
-  var searchMe = document.getElementById("current").innerText;
+  var searchCountry = document.getElementById("current").innerText;
 
-  // console.log("This is searchMe ", searchMe);
-  var html = "<p> Go to recipes from: " + searchMe + "<p>";
+  // console.log("This is searchCountry ", searchCountry);
+  var html = "<p> Go to recipes from: " + searchCountry + "<p>";
   document.querySelector("#clicked").innerHTML = html;
-  localStorage.setItem("searchMe", searchMe);
+  localStorage.setItem("searchCountry", searchCountry);
   // document.getElementById("clicked").
 }
 

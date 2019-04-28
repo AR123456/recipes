@@ -1,13 +1,51 @@
-// Need to get searchMe var to this page and use in to search the API
+// Need to get searchCountry var to this page and use in to search the API
 // find out what the syntax is for 2 word search terms and convert using regex
-//TODO look at way to take "searchMe and convert the country name in it to a better recipe search term for the API " for example Argentina is Argentine - is there a Wiki API ? to get ths search terms from the WIKI lis t of "dishes" see this example https://en.wikipedia.org/wiki/List_of_Argentine_dishes
+//TODO look at way to take "searchCountry and convert the country name in it to a better recipe search term for the API " for example Argentina is Argentine - is there a Wiki API ? to get ths search terms from the WIKI lis t of "dishes" see this example https://en.wikipedia.org/wiki/List_of_Argentine_dishes
 
-var searchTerm = localStorage.getItem("searchMe");
-// var searchTerm = localStorage.getItem("searchMe");
+//need function that takes in searchCountry and returns one of an array of cusieans  terms, which search term is used should be randomly generated
 
-// find html to write search term into the #current div
+var country = localStorage.getItem("searchCountry");
 
-console.log("This is searchMe ", searchTerm);
+// object country name  search terms
+const countryCuisine =
+  // {
+  //   country: "Australia",
+  //   cuisine: ["Barramundi", "Pavlova", "Vegemite", "Damper", "Anzac"]
+  // },
+  {
+    country: "Canada",
+    cuisine: [
+      "Poutine",
+      "Pierogi",
+      "fiddleheads",
+      "Cloudberry",
+      "Dulse",
+      "Tourtiere",
+      "Pemmican",
+      "Cretons",
+      "donair"
+    ]
+  };
+
+console.log(countryCuisine.country);
+console.log(countryCuisine.cuisine);
+
+if (country == countryCuisine.country) {
+  var randomCuisine =
+    countryCuisine.cuisine[
+      Math.floor(Math.random() * countryCuisine.cuisine.length)
+    ];
+
+  console.log(randomCuisine);
+} else {
+  var randomCuisine = country;
+  console.log(country);
+}
+
+//need function that takes in searchCountry and returns one of an array of cusieans  terms, which search term is used should be randomly generated
+// console.log(countryCuisine.country);
+// console.log(countryCuisine.cuisine[2]);
+searchTerm = randomCuisine;
 
 const queryURL =
   "https://api.edamam.com/search?q=" +
@@ -26,10 +64,12 @@ $.ajax({
   console.log(response.hits[1].recipe.ingredients);
   // re write all of this if vanilla javscript to eventualy use d3 to draw bubble chart of macro nutriants
   // // The nutriants
-  console.log(response.hits[1].recipe.calories);
-  console.log(response.hits[1].recipe.totalNutrients.FAT.quantity);
-  console.log(response.hits[1].recipe.totalNutrients.CHOCDF.quantity);
-  console.log(response.hits[1].recipe.totalNutrients.PROCNT.quantity);
+  console.log("total cal " + response.hits[1].recipe.calories);
+  console.log("Fat " + response.hits[1].recipe.totalNutrients.FAT.quantity);
+  console.log(
+    "Carbs " + response.hits[1].recipe.totalNutrients.CHOCDF.quantity
+  );
+  console.log("pro " + response.hits[1].recipe.totalNutrients.PROCNT.quantity);
 
   for (let i = 0; i < response.hits.length; i++) {
     let recipeDiv = $("<div>");
@@ -48,7 +88,7 @@ $.ajax({
     recipeDiv.append(image);
     recipeDiv.append(p);
 
-    $("#recipe-div").prepend(recipeDiv);
+    $("#recipe-div").append(recipeDiv);
 
     //  ////////////////////////// render nut data
 
