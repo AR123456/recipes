@@ -7,10 +7,29 @@
 var country = localStorage.getItem("searchCountry");
 
 // object country name  search terms
-const countryCuisine = {
-  country: "Australia",
-  cuisine: ["Barramundi", "Pavlova", "Vegemite", "Damper", "Anzac"]
-};
+const countryCuisine =
+  // {
+  //   country: "Australia",
+  //   cuisine: ["Barramundi", "Pavlova", "Vegemite", "Damper", "Anzac"]
+  // },
+  {
+    country: "Canada",
+    cuisine: [
+      "Poutine",
+      "Pierogi",
+      "fiddleheads",
+      "Cloudberry",
+      "Dulse",
+      "Tourtiere",
+      "Pemmican",
+      "Cretons",
+      "donair"
+    ]
+  };
+
+console.log(countryCuisine.country);
+console.log(countryCuisine.cuisine);
+
 if (country == countryCuisine.country) {
   var randomCuisine =
     countryCuisine.cuisine[
@@ -45,10 +64,12 @@ $.ajax({
   console.log(response.hits[1].recipe.ingredients);
   // re write all of this if vanilla javscript to eventualy use d3 to draw bubble chart of macro nutriants
   // // The nutriants
-  console.log(response.hits[1].recipe.calories);
-  console.log(response.hits[1].recipe.totalNutrients.FAT.quantity);
-  console.log(response.hits[1].recipe.totalNutrients.CHOCDF.quantity);
-  console.log(response.hits[1].recipe.totalNutrients.PROCNT.quantity);
+  console.log("total cal " + response.hits[1].recipe.calories);
+  console.log("Fat " + response.hits[1].recipe.totalNutrients.FAT.quantity);
+  console.log(
+    "Carbs " + response.hits[1].recipe.totalNutrients.CHOCDF.quantity
+  );
+  console.log("pro " + response.hits[1].recipe.totalNutrients.PROCNT.quantity);
 
   for (let i = 0; i < response.hits.length; i++) {
     let recipeDiv = $("<div>");
