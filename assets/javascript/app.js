@@ -154,9 +154,11 @@ $.ajax({
       .append("svg")
       .attr("width", 346)
       .attr("height", 346);
+    // .append("text")
+    // .text(response.hits[i].recipe.label);
 
     // create graph group
-    const graph = svg.append("g").attr("transform", "translate(10,50)"); // to give a 50px margin
+    const graph = svg.append("g").attr("transform", "translate(10,10)"); // to give a 50px margin
     // use the d3.js stratify method - attach some extra properties that d3 can use to generate the visualizations. Tells d3 which is the parent and the identifier
     const stratify = d3
       .stratify()
