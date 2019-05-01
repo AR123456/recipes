@@ -1,10 +1,10 @@
 var autopan = null;
-
+// git hub repo mapbox  https://github.com/mapbox/mapbox-gl-js
 mapboxgl.accessToken =
   "pk.eyJ1IjoibXdpbGJlciIsImEiOiJjaWswbW14dmMzOW8zdmdsenhmNm12MzU5In0.vv7SVA4Eau_NrJj_aeZgqQ";
 var map = new mapboxgl.Map({
   container: "map", // container id
-  style: "", //hosted style id
+  style: "mapbox://styles/mwilber/cik0moi6w011690lxbamsqm7h", //hosted style id
   //style: 'mapbox://styles/mapbox/streets-v8',
   center: [-72.38, 39], // starting position
   pitch: 90, // pitch in degrees
