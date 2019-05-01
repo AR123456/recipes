@@ -3,9 +3,9 @@
 //TODO look at way to take "searchCountry and convert the country name in it to a better recipe search term for the API " for example Argentina is Argentine - is there a Wiki API ? to get ths search terms from the WIKI lis t of "dishes" see this example https://en.wikipedia.org/wiki/List_of_Argentine_dishes
 
 //need function that takes in searchCountry and returns one of an array of cusieans  terms, which search term is used should be randomly generated
-
-var country = localStorage.getItem("searchCountry");
-
+var rawSearch = localStorage.getItem("searchCountry");
+// var country = localStorage.getItem("searchCountry");
+console.log("This should be showing the clicked on country : " + rawSearch);
 // object country name  search terms
 const countryCuisine =
   // {
@@ -13,7 +13,7 @@ const countryCuisine =
   //   cuisine: ["Barramundi", "Pavlova", "Vegemite", "Damper", "Anzac"]
   // },
   {
-    country: "Canada",
+    countryMatch: "Canada",
     cuisine: [
       "Poutine",
       "Pierogi",
@@ -27,10 +27,10 @@ const countryCuisine =
     ]
   };
 
-console.log(countryCuisine.country);
+console.log(countryCuisine.countryMatch);
 console.log(countryCuisine.cuisine);
 
-if (country == countryCuisine.country) {
+if (rawSearch == countryCuisine.countryMatch) {
   var randomCuisine =
     countryCuisine.cuisine[
       Math.floor(Math.random() * countryCuisine.cuisine.length)
@@ -38,10 +38,9 @@ if (country == countryCuisine.country) {
 
   console.log(randomCuisine);
 } else {
-  var randomCuisine = country;
-  console.log(country);
+  var randomCuisine = rawSearch;
 }
-
+console.log(randomCuisine);
 //need function that takes in searchCountry and returns one of an array of cusieans  terms, which search term is used should be randomly generated
 // console.log(countryCuisine.country);
 // console.log(countryCuisine.cuisine[2]);
