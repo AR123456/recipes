@@ -29,7 +29,7 @@ const countryCuisine =
 
 console.log(countryCuisine.countryMatch);
 console.log(countryCuisine.cuisine);
-
+// dont forget about the indexOf , could write this using it look at the Bands exrcise in the bootcamp javascritp section
 if (rawSearch == countryCuisine.countryMatch) {
   var randomCuisine =
     countryCuisine.cuisine[
