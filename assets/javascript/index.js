@@ -47,9 +47,29 @@ function enter(country) {
     //   "country name clicked from the add eventlistener",
     //   country.name
     // );
-    // stopRotation();
+    stopRotation();
     getRecipeCountry();
   });
+  /////// // for I phones
+  var onlongtouch;
+  var timer;
+  var touchduration = 500; //length of time we want the user to touch before we do something
+
+  touchstart = function() {
+    timer = setTimeout(onlongtouch, touchduration);
+  };
+
+  touchend = function() {
+    //stops short touches from firing the event
+    if (timer) clearTimeout(timer); // clearTimeout, not cleartimeout..
+  };
+
+  onlongtouch = function() {
+    //do something
+    stopRotation();
+    getRecipeCountry();
+  };
+  /////////////////
 }
 
 /// find out why sometimes this is not saving to local storage and sometimes the local storage is different on recipe page than globe page  ????????????????????
