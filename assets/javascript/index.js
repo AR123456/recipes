@@ -51,24 +51,25 @@ function enter(country) {
     getRecipeCountry();
   });
   /////// // for I phones
-  var onlongtouch;
-  var timer;
-  var touchduration = 500; //length of time we want the user to touch before we do something
-
-  touchstart = function() {
-    timer = setTimeout(onlongtouch, touchduration);
-  };
-
-  touchend = function() {
-    //stops short touches from firing the event
-    if (timer) clearTimeout(timer); // clearTimeout, not cleartimeout..
-  };
-
-  onlongtouch = function() {
-    //do something
+  var touchtime = 0;
+  $(".target").on("click", function() {
+    if (touchtime == 0) {
+      // set first click
+      touchtime = new Date().getTime();
+    } else {
+      // compare first click to this click and see if they occurred within double click threshold
+      if (new Date().getTime() - touchtime < 800) {
+        // double click occurred
+        alert("double clicked");
+        touchtime = 0;
+      } else {
+        // not a double click so set as a new first click
+        touchtime = new Date().getTime();
+      }
+    }
     stopRotation();
     getRecipeCountry();
-  };
+  });
   /////////////////
 }
 
