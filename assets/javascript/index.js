@@ -35,6 +35,8 @@ function enter(country) {
   });
   current.text((country && country.name) || ""); //the name of the country get ID from API compare to tsv file and return corresponding name or nothing
 
+  // ***********look a this for the Iphone problem https://stackoverflow.com/questions/19128311/click-button-for-one-function-click-again-for-another
+  // also look at using a named function for the call back like in the d3 tooltip example from the advancd web dev course
   // console.log("on mouse over country name ", country.name);
   addEventListener("click", function() {
     console.log("first click");
