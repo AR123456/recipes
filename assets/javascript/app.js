@@ -8,8 +8,9 @@ var rawSearch = localStorage.getItem("searchCountry");
 console.log("This should be showing the clicked on country : " + rawSearch);
 // object country name  search terms
 const countryCuisine =
+  // could try first item in array is country  then remaining are cuisine
   // {
-  //   country: "Australia",
+  //   countryMatch: "Australia",
   //   cuisine: ["Barramundi", "Pavlova", "Vegemite", "Damper", "Anzac"]
   // },
   {

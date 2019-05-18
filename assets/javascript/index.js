@@ -35,42 +35,18 @@ function enter(country) {
   });
   current.text((country && country.name) || ""); //the name of the country get ID from API compare to tsv file and return corresponding name or nothing
 
+  // ***********look a this for the Iphone problem https://stackoverflow.com/questions/19128311/click-button-for-one-function-click-again-for-another
+  // also look at using a named function for the call back like in the d3 tooltip example from the advancd web dev course
   // console.log("on mouse over country name ", country.name);
-  addEventListener("click", function() {
-    console.log("first click");
-    stopRotation();
-  });
+  // addEventListener("click", function() {
+  //   console.log("first click");
+  //   stopRotation();
+  // });
   addEventListener("dblclick", function() {
     // this is finding the clicked on counter and logs the correct id of that country
-
-    // console.log(
-    //   "country name clicked from the add eventlistener",
-    //   country.name
-    // );
     stopRotation();
     getRecipeCountry();
   });
-  /////// // for I phones
-  var touchtime = 0;
-  $(".target").on("click", function() {
-    if (touchtime == 0) {
-      // set first click
-      touchtime = new Date().getTime();
-    } else {
-      // compare first click to this click and see if they occurred within double click threshold
-      if (new Date().getTime() - touchtime < 800) {
-        // double click occurred
-        alert("double clicked");
-        touchtime = 0;
-      } else {
-        // not a double click so set as a new first click
-        touchtime = new Date().getTime();
-      }
-    }
-    stopRotation();
-    getRecipeCountry();
-  });
-  /////////////////
 }
 
 /// find out why sometimes this is not saving to local storage and sometimes the local storage is different on recipe page than globe page  ????????????????????
