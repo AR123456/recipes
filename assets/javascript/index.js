@@ -38,15 +38,32 @@ function enter(country) {
   // ***********look a this for the Iphone problem https://stackoverflow.com/questions/19128311/click-button-for-one-function-click-again-for-another
   // also look at using a named function for the call back like in the d3 tooltip example from the advancd web dev course
   // console.log("on mouse over country name ", country.name);
-  // addEventListener("click", function() {
-  //   console.log("first click");
-  //   stopRotation();
-  // });
-  addEventListener("dblclick", function() {
-    // this is finding the clicked on counter and logs the correct id of that country
+  addEventListener("click", function() {
+    // console.log("first click");
     stopRotation();
-    getRecipeCountry();
+    doubletap();
   });
+  // addEventListener("dblclick", function() {
+  //   // this is finding the clicked on counter and logs the correct id of that country
+  //   stopRotation();
+  //   getRecipeCountry();
+  // });
+  var mylatesttap;
+  // from this stack post  https://stackoverflow.com/questions/8825144/detect-double-tap-on-ipad-or-iphone-screen-using-javascript
+  function doubletap() {
+    var now = new Date().getTime();
+    var timesince = now - mylatesttap;
+    if (timesince < 600 && timesince > 0) {
+      // double tap
+      console.log(" hit the double tap; ");
+      getRecipeCountry();
+    } else {
+      console.log("no double tap ");
+      // too much time to be a doubletap
+    }
+
+    mylatesttap = new Date().getTime();
+  }
 }
 
 /// find out why sometimes this is not saving to local storage and sometimes the local storage is different on recipe page than globe page  ????????????????????
