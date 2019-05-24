@@ -13,8 +13,28 @@ var countryCuisine =
   // could try first item in array is country  then remaining are cuisine
   [
     {
+      countryMatch: "Afghanistan",
+      cuisine: ["Afghanistan"]
+    },
+    {
+      countryMatch: "Albania",
+      cuisine: ["Albania"]
+    },
+    {
+      countryMatch: "Antarctica",
+      cuisine: ["Bannocks", "Pemmican", "Antarctica"]
+    },
+    {
+      countryMatch: "Angola",
+      cuisine: ["okra", "makara", "Egusi soup", "peanut soup"]
+    },
+    {
       countryMatch: "Australia",
       cuisine: ["Barramundi", "Pavlova", "Vegemite", "Damper", "Anzac"]
+    },
+    {
+      countryMatch: "Algeria",
+      cuisine: ["Algeria "]
     },
     {
       countryMatch: "Brazil",
@@ -44,8 +64,85 @@ var countryCuisine =
       ]
     },
     {
+      countryMatch: "Cameroon",
+      cuisine: ["okra", "makara", "Egusi soup", "peanut soup"]
+    },
+    {
+      countryMatch: "Central African Republic",
+      cuisine: ["okra", "makara", "Egusi soup", "peanut soup", "Fufu"]
+    },
+
+    {
+      countryMatch: "Chad",
+      cuisine: ["okra", "makara", "Egusi soup", "peanut soup", "Fufu"]
+    },
+    {
+      countryMatch: "Congo",
+      cuisine: ["okra", "makara", "Egusi soup", "peanut soup", "Fufu"]
+    },
+    {
+      countryMatch: "Equatorial Guinea",
+      cuisine: ["okra", "makara", "Egusi soup", "peanut soup", "Fufu"]
+    },
+    {
+      countryMatch: "Ethiopia",
+      cuisine: ["Injera", "Tibs", "Kitfo", "Doro wot"]
+    },
+    {
+      countryMatch: "Egypt",
+      cuisine: ["Egypt", "fava beans", "Koshary", "Kofta", "Duqqa"]
+    },
+    {
+      countryMatch: "Peru",
+      cuisine: ["Juane", "causa", "humitas", "ceviche", "bollos"]
+    },
+    {
+      countryMatch: "Madagascar",
+      cuisine: ["Brochettes", "Madagascar"]
+    },
+    {
+      countryMatch: "Mali",
+      cuisine: ["Mali", "poulet yassa", "Jollof rice", "couscous"]
+    },
+    {
+      countryMatch: "Morocco",
+      cuisine: ["Morocco"]
+    },
+
+    {
+      countryMatch: "Russia",
+      cuisine: [
+        "Shchi",
+        "Pirozhki",
+        "Borscht",
+        "Pelmeni",
+        "Blini",
+        "Chicken Kiev",
+        "Vinegret",
+        "Solyanka",
+        "Shashlyk"
+      ]
+    },
+    {
+      countryMatch: "Spain",
+      cuisine: [
+        " Pisto",
+        "Tortilla Española",
+        "Paella",
+        "Gambas al ajillo",
+        "Pimientos de Padron",
+        "Fideuà",
+        "Patatas bravas",
+        "Empanadas"
+      ]
+    },
+    {
       countryMatch: "Sudan",
       cuisine: ["Molokhia", "banana", "Fenugreek", "kisra"]
+    },
+    {
+      countryMatch: "Tanzania",
+      cuisine: ["Chapatti", "Coconut Bean Soup", "Ugali"]
     }
   ];
 
@@ -55,22 +152,26 @@ var countryCuisine =
 // dont forget about the indexOf , could write this using it look at the Bands exrcise in the bootcamp javascritp section
 for (let i = 0; i < countryCuisine.length; i++) {
   // console.log(countryCuisine[i].countryMatch);
-  if (rawSearch === countryCuisine[i].countryMatch) {
+  // console.log(rawSearch);
+  if (rawSearch == countryCuisine[i].countryMatch) {
+    // console.log(countryCuisine[i].cuisine.length);
     var randomCuisine =
       countryCuisine[i].cuisine[
         Math.floor(Math.random() * countryCuisine[i].cuisine.length)
       ];
 
-    console.log(randomCuisine);
-  } else {
-    var randomCuisine = rawSearch;
-    console.log(randomCuisine);
+    // console.log(randomCuisine);
+  } else if (rawSearch !== countryCuisine[i].countryMatch) {
+    console.log("hit the else if");
+    // var randomCuisine = rawSearch;
+    // console.log(randomCuisine);
   }
 
   //need function that takes in searchCountry and returns one of an array of cusieans  terms, which search term is used should be randomly generated
   // console.log(countryCuisine.country);
   // console.log(countryCuisine.cuisine[2]);
 }
+console.log(randomCuisine);
 searchTerm = randomCuisine;
 const queryURL =
   "https://api.edamam.com/search?q=" +

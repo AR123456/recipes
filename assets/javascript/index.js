@@ -39,7 +39,7 @@ function enter(country) {
   // also look at using a named function for the call back like in the d3 tooltip example from the advancd web dev course
   // console.log("on mouse over country name ", country.name);
   addEventListener("click", function() {
-    // console.log("first click");
+    console.log("first click");
     stopRotation();
     doubletap();
   });
