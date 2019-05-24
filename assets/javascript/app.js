@@ -118,7 +118,16 @@ var countryCuisine =
       countryMatch: "Chad",
       cuisine: ["okra", "makara", "Egusi soup", "peanut soup", "Fufu"]
     },
-    { countryMatch: "Chile", cuisine: ["Chile"] },
+    {
+      countryMatch: "Chile",
+      cuisine: [
+        "Completo",
+        "Chilean Empanadas",
+        "Chile",
+        "Porotos Granados",
+        "Pastel de Choclo"
+      ]
+    },
     { countryMatch: "China", cuisine: ["China"] },
     { countryMatch: "Christmas Island", cuisine: ["Christmas Island"] },
     {
@@ -206,7 +215,7 @@ var countryCuisine =
     { countryMatch: "Hong Kong", cuisine: ["Hong Kong"] },
     { countryMatch: "Hungary", cuisine: ["Hungary"] },
     { countryMatch: "Iceland", cuisine: ["Iceland"] },
-    { countryMatch: "India", cuisine: ["India"] },
+    { countryMatch: "India",cuisine: ["ALU GOBI","Saag Paneer","India",   "BEEF VINDALOO","BUTTER CHICKEN"] },
     { countryMatch: "Indonesia", cuisine: ["Indonesia"] },
     {
       countryMatch: "Iran, Islamic Republic of",
@@ -215,8 +224,22 @@ var countryCuisine =
     { countryMatch: "Iraq", cuisine: ["Iraq"] },
     { countryMatch: "Ireland", cuisine: ["Ireland"] },
     { countryMatch: "Isle of Man", cuisine: ["Isle of Man"] },
-    { countryMatch: "Israel", cuisine: ["Israel"] },
-    { countryMatch: "Italy", cuisine: ["Italy"] },
+    {
+      countryMatch: "Israel",
+      cuisine: ["Israel", "Falafel", "Hummus", "Shwarma", "Shakshooka"]
+    },
+    {
+      countryMatch: "Italy",
+      cuisine: [
+        "arancini",
+        "Carbonara",
+        "Fiorentina Steak",
+        "Ossobuco",
+        "Italy",
+        "Ribollita",
+        "Risotto"
+      ]
+    },
     { countryMatch: "Jamaica", cuisine: ["Jamaica"] },
     { countryMatch: "Japan", cuisine: ["Japan"] },
     { countryMatch: "Jersey", cuisine: ["Jersey"] },
@@ -263,7 +286,18 @@ var countryCuisine =
     { countryMatch: "Mauritania", cuisine: ["Mauritania"] },
     { countryMatch: "Mauritius", cuisine: ["Mauritius"] },
     { countryMatch: "Mayotte", cuisine: ["Mayotte"] },
-    { countryMatch: "Mexico", cuisine: ["Mexico"] },
+    {
+      countryMatch: "Mexico",
+      cuisine: [
+        "Mexico",
+        "Tacos al pastor",
+        "Chilaquiles",
+        "Elote",
+        "Chiles en nogada",
+        "Mole",
+        "Guacamole"
+      ]
+    },
     {
       countryMatch: "Micronesia, Federated States of",
       cuisine: ["Micronesia, Federated States of"]
