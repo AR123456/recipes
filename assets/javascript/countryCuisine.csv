@@ -182,7 +182,7 @@
 {countryMatch:"Qatar",cuisine:["Qatar"]},
 {countryMatch:"Réunion",cuisine:["Réunion"]},
 {countryMatch:"Romania",cuisine:["Romania"]},
-{countryMatch: "Russia",cuisine: ["Shchi","Pirozhki","Borscht","Pelmeni","Blini","Chicken Kiev","Vinegret","Solyanka","Shashlyk"]},
+{countryMatch: "Russia",cuisine: ["Shchi","Pirozhki","Borscht","Pelmeni","Blini","Chicken Kiev","Vinegret","Solyanka"]},
 {countryMatch:"Rwanda",cuisine:["Rwanda"]},
 {countryMatch:"Saint Barthélemy",cuisine:["Saint Barthélemy"]},
 {countryMatch:"Saint Helena, Ascension and Tristan da Cunha",cuisine:["Saint Helena, Ascension and Tristan da Cunha"]},

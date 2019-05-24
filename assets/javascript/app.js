@@ -325,8 +325,7 @@ var countryCuisine =
         "Blini",
         "Chicken Kiev",
         "Vinegret",
-        "Solyanka",
-        "Shashlyk"
+        "Solyanka"
       ]
     },
     { countryMatch: "Rwanda", cuisine: ["Rwanda"] },
