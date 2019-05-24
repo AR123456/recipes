@@ -8,13 +8,26 @@ var rawSearch = localStorage.getItem("searchCountry");
 console.log(
   " Raw Search This should be showing the clicked on country : " + rawSearch
 );
-// object country name  search terms
+// object country name  search terms to do put this in an external file to grab or in the database
 var countryCuisine =
   // could try first item in array is country  then remaining are cuisine
   [
     {
       countryMatch: "Australia",
       cuisine: ["Barramundi", "Pavlova", "Vegemite", "Damper", "Anzac"]
+    },
+    {
+      countryMatch: "Brazil",
+      cuisine: [
+        "manioc",
+        "feijoada",
+        "polenta",
+        "acaraje",
+        "coxinhas",
+        "Esfiha",
+        "Pasteis",
+        "Pinhao"
+      ]
     },
     {
       countryMatch: "Canada",
@@ -32,14 +45,7 @@ var countryCuisine =
     },
     {
       countryMatch: "Sudan",
-      cuisine: [
-        "Kuindiong",
-        "Moukhbaza",
-        "kisra",
-        "Dura",
-        "Asseeda",
-        "Gourrassa"
-      ]
+      cuisine: ["Molokhia", "banana", "Fenugreek", "kisra"]
     }
   ];
 
@@ -48,8 +54,8 @@ var countryCuisine =
 
 // dont forget about the indexOf , could write this using it look at the Bands exrcise in the bootcamp javascritp section
 for (let i = 0; i < countryCuisine.length; i++) {
-  console.log(countryCuisine[i].countryMatch);
-  if (rawSearch == countryCuisine[i].countryMatch) {
+  // console.log(countryCuisine[i].countryMatch);
+  if (rawSearch === countryCuisine[i].countryMatch) {
     var randomCuisine =
       countryCuisine[i].cuisine[
         Math.floor(Math.random() * countryCuisine[i].cuisine.length)
@@ -58,15 +64,14 @@ for (let i = 0; i < countryCuisine.length; i++) {
     console.log(randomCuisine);
   } else {
     var randomCuisine = rawSearch;
+    console.log(randomCuisine);
   }
-  console.log(randomCuisine);
+
   //need function that takes in searchCountry and returns one of an array of cusieans  terms, which search term is used should be randomly generated
   // console.log(countryCuisine.country);
   // console.log(countryCuisine.cuisine[2]);
 }
-
 searchTerm = randomCuisine;
-
 const queryURL =
   "https://api.edamam.com/search?q=" +
   searchTerm +
