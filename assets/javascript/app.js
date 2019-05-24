@@ -5,46 +5,66 @@
 //need function that takes in searchCountry and returns one of an array of cusieans  terms, which search term is used should be randomly generated
 var rawSearch = localStorage.getItem("searchCountry");
 // var country = localStorage.getItem("searchCountry");
-console.log("This should be showing the clicked on country : " + rawSearch);
+console.log(
+  " Raw Search This should be showing the clicked on country : " + rawSearch
+);
 // object country name  search terms
-const countryCuisine =
+var countryCuisine =
   // could try first item in array is country  then remaining are cuisine
-  // {
-  //   countryMatch: "Australia",
-  //   cuisine: ["Barramundi", "Pavlova", "Vegemite", "Damper", "Anzac"]
-  // },
-  {
-    countryMatch: "Canada",
-    cuisine: [
-      "Poutine",
-      "Pierogi",
-      "fiddleheads",
-      "Cloudberry",
-      "Dulse",
-      "Tourtiere",
-      "Pemmican",
-      "Cretons",
-      "donair"
-    ]
-  };
+  [
+    {
+      countryMatch: "Australia",
+      cuisine: ["Barramundi", "Pavlova", "Vegemite", "Damper", "Anzac"]
+    },
+    {
+      countryMatch: "Canada",
+      cuisine: [
+        "Poutine",
+        "Pierogi",
+        "fiddleheads",
+        "Cloudberry",
+        "Dulse",
+        "Tourtiere",
+        "Pemmican",
+        "Cretons",
+        "donair"
+      ]
+    },
+    {
+      countryMatch: "Sudan",
+      cuisine: [
+        "Kuindiong",
+        "Moukhbaza",
+        "kisra",
+        "Dura",
+        "Asseeda",
+        "Gourrassa"
+      ]
+    }
+  ];
 
-console.log(countryCuisine.countryMatch);
-console.log(countryCuisine.cuisine);
+// console.log(countryCuisine[0].countryMatch);
+// console.log(countryCuisine[0].cuisine);
+
 // dont forget about the indexOf , could write this using it look at the Bands exrcise in the bootcamp javascritp section
-if (rawSearch == countryCuisine.countryMatch) {
-  var randomCuisine =
-    countryCuisine.cuisine[
-      Math.floor(Math.random() * countryCuisine.cuisine.length)
-    ];
+for (let i = 0; i < countryCuisine.length; i++) {
+  console.log(countryCuisine[i].countryMatch);
+  if (rawSearch == countryCuisine[i].countryMatch) {
+    var randomCuisine =
+      countryCuisine[i].cuisine[
+        Math.floor(Math.random() * countryCuisine[i].cuisine.length)
+      ];
 
+    console.log(randomCuisine);
+  } else {
+    var randomCuisine = rawSearch;
+  }
   console.log(randomCuisine);
-} else {
-  var randomCuisine = rawSearch;
+  //need function that takes in searchCountry and returns one of an array of cusieans  terms, which search term is used should be randomly generated
+  // console.log(countryCuisine.country);
+  // console.log(countryCuisine.cuisine[2]);
 }
-console.log(randomCuisine);
-//need function that takes in searchCountry and returns one of an array of cusieans  terms, which search term is used should be randomly generated
-// console.log(countryCuisine.country);
-// console.log(countryCuisine.cuisine[2]);
+
 searchTerm = randomCuisine;
 
 const queryURL =
