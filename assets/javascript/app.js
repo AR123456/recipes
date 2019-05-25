@@ -215,7 +215,16 @@ var countryCuisine =
     { countryMatch: "Hong Kong", cuisine: ["Hong Kong"] },
     { countryMatch: "Hungary", cuisine: ["Hungary"] },
     { countryMatch: "Iceland", cuisine: ["Iceland"] },
-    { countryMatch: "India",cuisine: ["ALU GOBI","Saag Paneer","India",   "BEEF VINDALOO","BUTTER CHICKEN"] },
+    {
+      countryMatch: "India",
+      cuisine: [
+        "ALU GOBI",
+        "Saag Paneer",
+        "India",
+        "BEEF VINDALOO",
+        "BUTTER CHICKEN"
+      ]
+    },
     { countryMatch: "Indonesia", cuisine: ["Indonesia"] },
     {
       countryMatch: "Iran, Islamic Republic of",
@@ -571,6 +580,7 @@ $.ajax({
       {
         name: "calories",
         parent: "",
+
         amount: response.hits[i].recipe.calories
       }, // recipe.calories
       //three sub categories FAT , CHOCDF and PROCNT - their parent is calories
@@ -696,6 +706,7 @@ $.ajax({
     // stroke width
     nodes
       .append("circle")
+
       // the radius of the circles will be driven by the data in the object we got from the pack methond above
       .attr("r", d => d.r)
       // make the boarder white

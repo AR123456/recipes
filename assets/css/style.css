@@ -5,7 +5,18 @@ body {
   /* background: rgb(32, 137, 236); */
   background: #000204;
 }
-
+.modal {
+  filter: drop-shadow(0 0 0.95rem white);
+}
+.modal-content {
+  background: #000204;
+  color: white;
+  font-family: sans-serif;
+  font-size: 2.2em;
+}
+.btn {
+  background-color: #57bb86;
+}
 #globe {
   filter: drop-shadow(0 0 0.95rem white);
   cursor: move;

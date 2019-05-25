@@ -41,6 +41,7 @@ function enter(country) {
   addEventListener("click", function() {
     console.log("first click");
     stopRotation();
+
     doubletap();
   });
   // addEventListener("dblclick", function() {
@@ -56,6 +57,7 @@ function enter(country) {
     if (timesince < 600 && timesince > 0) {
       // double tap
       console.log(" hit the double tap; ");
+
       getRecipeCountry();
     } else {
       console.log("no double tap ");
@@ -73,13 +75,16 @@ function getRecipeCountry() {
   // document.getElementById("current").value = document.getElementById(
   //   "clicked"
   // ).value;
-
+  // the modal is opening but no text is going into it....
+  $("#myModal").modal();
   ///this is pickeing up the hovered on countery , need to get the one clicked on
   var searchCountry = document.getElementById("current").innerText;
 
   // console.log("This is searchCountry ", searchCountry);
-  var html = "<p> Go to recipes from: " + searchCountry + "<p>";
-  document.querySelector("#clicked").innerHTML = html;
+  // putting this p tag on the page
+  // var html = "<p> Go to recipes from: " + searchCountry + "<p>";
+  $("#clicked").text(searchCountry);
+  // document.querySelector("#clicked").innerHTML = html;
   localStorage.setItem("searchCountry", searchCountry);
   // document.getElementById("clicked").
 }
