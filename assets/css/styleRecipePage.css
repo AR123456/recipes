@@ -38,6 +38,7 @@ svg {
 }
 #footer {
   /* position: absolute; */
+  filter: drop-shadow(0 0 0.95rem white);
   position: fixed;
   bottom: 0px;
   left: 0px;
@@ -57,7 +58,7 @@ svg {
   height: 92%;
   margin-top: 8%;
 }
-
+/* 
 #mapmask {
   position: absolute;
   width: 100%;
@@ -65,7 +66,7 @@ svg {
   background: transparent url("../images/atmosphere.png") 50% 0px no-repeat;
   background-size: 100% auto;
   z-index: 1;
-}
+} */
 
 @media (max-width: 800px) {
   #mapwrap,
