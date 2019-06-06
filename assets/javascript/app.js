@@ -257,10 +257,10 @@ var countryCuisine =
     { countryMatch: "Kenya", cuisine: ["Kenya"] },
     { countryMatch: "Kiribati", cuisine: ["Kiribati"] },
     {
-      countryMatch: "Korea, Democratic People's Republic of",
-      cuisine: ["Korea, Democratic People's Republic of"]
+      countryMatch: "Korea",
+      cuisine: ["Korea", "Bibimbap", "Bokkeum-bap", "Japchae"]
     },
-    { countryMatch: "Korea, Republic of", cuisine: ["Korea, Republic of"] },
+    // { countryMatch: "Korea", cuisine: ["Bokkeum-bap"] },
     { countryMatch: "Kosovo", cuisine: ["Kosovo"] },
     { countryMatch: "Kuwait", cuisine: ["Kuwait"] },
     { countryMatch: "Kyrgyzstan", cuisine: ["Kyrgyzstan"] },
@@ -400,7 +400,7 @@ var countryCuisine =
       countryMatch: "Sao Tome and Principe",
       cuisine: ["Sao Tome and Principe"]
     },
-    { countryMatch: "Saudi Arabia", cuisine: ["Saudi Arabia"] },
+    { countryMatch: "Saudi Arabia", cuisine: ["Saudi Arabia", "Mandi"] },
     { countryMatch: "Senegal", cuisine: ["Senegal"] },
     { countryMatch: "Serbia", cuisine: ["Serbia"] },
     { countryMatch: "Seychelles", cuisine: ["Seychelles"] },
