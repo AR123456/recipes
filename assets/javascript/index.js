@@ -81,12 +81,20 @@ function getRecipeCountry() {
   // document.getElementById("current").value = document.getElementById(
   //   "clicked"
   // ).value;
-  // the modal is opening but no text is going into it....
+
   $("#myModal").modal();
   ///this is pickeing up the hovered on countery , need to get the one clicked on
   var searchCountry = document.getElementById("current").innerText;
+  /// this it to not pop up an empty modal if a country has was not clicked
+  //current.text((country && country.name) || ""); //the name of the country get ID from API compare to tsv file and return corresponding name or nothing
 
   // console.log("This is searchCountry ", searchCountry);
+
+  if (searchCountry != "") {
+    // console.log("This is searchCountry ", searchCountry);
+  } else {
+    searchCountry = "Try again";
+  }
   // putting this p tag on the page
   // var html = "<p> Go to recipes from: " + searchCountry + "<p>";
   $("#clicked").text(searchCountry);

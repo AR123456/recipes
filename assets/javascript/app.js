@@ -574,6 +574,7 @@ $.ajax({
     $("#recipe-div").append(recipeDiv);
 
     //  ////////////////////////// render nut data
+    /// to do render this in when userr hovers on the recipe pic
 
     const data = [
       //root category the parent of the blog so parent is empty
