@@ -125,7 +125,7 @@ var countryCuisine =
         "Cloudberry",
         "Dulse",
         "Tourtiere",
-        "Pemmican",
+
         "Cretons",
         "donair"
       ]
@@ -770,7 +770,7 @@ searchTerm = randomCuisine;
 const queryURL =
   "https://api.edamam.com/search?q=" +
   searchTerm +
-  "&app_id=7f505e41&app_key=c431472652d71ea7fad63f915856366d&from=0&to=3&health=alcohol-free";
+  "&app_id=7f505e41&app_key=c431472652d71ea7fad63f915856366d&from=0&to=7&health=alcohol-free";
 
 $.ajax({
   url: queryURL,
@@ -876,6 +876,7 @@ $.ajax({
       .append("svg")
       .attr("width", 346)
       .attr("height", 346);
+
     // .append("text")
     // .text(response.hits[i].recipe.label);
 
@@ -955,6 +956,7 @@ $.ajax({
       // .attr("fill", "purple");
       // updating color attr to use ordinal scale l
       .attr("fill", d => color(d.depth));
+
     // append text to nodes with no children
     // check for no children  in the filter by looking for faulsy or trunthy ( children)
     nodes
@@ -970,6 +972,27 @@ $.ajax({
       // font size determined by the actual value,  times some number
       .style("font-size", d => d.value)
       .text(d => d.data.name);
+    // this line puts the  label in the little circle
+    // .text(response.hits[i].recipe.label);
+    nodes
+      .filter(d => !d.parent)
+      //add text to each bubble
+      .append("text")
+      // puts text in middle
+      // .attr("text-align", "right")
+      .attr("dx", "-95")
+      // .text("baseline-shift")
+
+      // this gives it a offset in the y direction
+      .attr("dy", "50%")
+      //set the fill color of the text
+      .attr("fill", "#ff3796")
+      // font size determined by the actual value,  times some number
+      .style("font-size", 15)
+      .text(d => d.data.name)
+
+      .text(response.hits[i].recipe.label);
+
     ////////////////////////////
   }
 });
