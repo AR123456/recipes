@@ -234,7 +234,16 @@ var countryCuisine =
     { countryMatch: "Gabon", cuisine: ["Gabon"] },
     { countryMatch: "Gambia", cuisine: ["Gambia"] },
     { countryMatch: "Georgia", cuisine: ["Georgia"] },
-    { countryMatch: "Germany", cuisine: ["Germany"] },
+    {
+      countryMatch: "Germany",
+      cuisine: [
+        "German",
+        "sauerbraten",
+        "bratwurst",
+        "sauerkraut",
+        "kartoffelpuffer"
+      ]
+    },
     { countryMatch: "Ghana", cuisine: ["Ghana"] },
     { countryMatch: "Gibraltar", cuisine: ["Gibraltar"] },
     { countryMatch: "Greece", cuisine: ["Greece"] },
@@ -265,9 +274,12 @@ var countryCuisine =
       cuisine: [
         "ALU GOBI",
         "Saag Paneer",
-        "India",
+        "Indian",
         "BEEF VINDALOO",
-        "BUTTER CHICKEN"
+        "BUTTER CHICKEN",
+        "Baba ganoush",
+        "hummus",
+        "biryani"
       ]
     },
     { countryMatch: "Indonesia", cuisine: ["Indonesia"] },
@@ -663,7 +675,9 @@ var countryCuisine =
         "tabbouleh",
         "falafel",
         "shawarma",
-        "biryani"
+        "biryani",
+        "lokanta",
+        "turkish eggs"
       ]
     },
     { countryMatch: "Turkmenistan", cuisine: ["Turkmenistan"] },
