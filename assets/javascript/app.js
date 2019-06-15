@@ -12,7 +12,18 @@ console.log(
 var countryCuisine =
   // could try first item in array is country  then remaining are cuisine
   [
-    { countryMatch: "Afghanistan", cuisine: ["Afghanistan"] },
+    {
+      countryMatch: "Afghanistan",
+      cuisine: [
+        "Afghanistan",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     { countryMatch: "Åland Islands", cuisine: ["Åland Islands"] },
     { countryMatch: "Albania", cuisine: ["Albania"] },
     { countryMatch: "Algeria", cuisine: ["Algeria"] },
@@ -45,7 +56,18 @@ var countryCuisine =
     { countryMatch: "Austria", cuisine: ["Austria"] },
     { countryMatch: "Azerbaijan", cuisine: ["Azerbaijan"] },
     { countryMatch: "Bahamas", cuisine: ["Bahamas"] },
-    { countryMatch: "Bahrain", cuisine: ["Bahrain"] },
+    {
+      countryMatch: "Bahrain",
+      cuisine: [
+        "Bahrain",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     { countryMatch: "Bangladesh", cuisine: ["Bangladesh"] },
     { countryMatch: "Barbados", cuisine: ["Barbados"] },
     { countryMatch: "Belarus", cuisine: ["Belarus"] },
@@ -150,7 +172,18 @@ var countryCuisine =
     { countryMatch: "Croatia", cuisine: ["Croatia"] },
     { countryMatch: "Cuba", cuisine: ["Cuba"] },
     { countryMatch: "Curaçao", cuisine: ["Curaçao"] },
-    { countryMatch: "Cyprus", cuisine: ["Cyprus"] },
+    {
+      countryMatch: "Cyprus",
+      cuisine: [
+        "Cyprus",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     { countryMatch: "Czech Republic", cuisine: ["Czech Republic"] },
     { countryMatch: "Denmark", cuisine: ["Denmark"] },
     { countryMatch: "Djibouti", cuisine: ["Djibouti"] },
@@ -159,7 +192,19 @@ var countryCuisine =
     { countryMatch: "Ecuador", cuisine: ["Ecuador"] },
     {
       countryMatch: "Egypt",
-      cuisine: ["Egypt", "fava beans", "Koshary", "Kofta", "Duqqa"]
+      cuisine: [
+        "Egypt",
+        "fava beans",
+        "Koshary",
+        "Kofta",
+        "Duqqa",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
     },
     { countryMatch: "El Salvador", cuisine: ["El Salvador"] },
     {
@@ -228,14 +273,45 @@ var countryCuisine =
     { countryMatch: "Indonesia", cuisine: ["Indonesia"] },
     {
       countryMatch: "Iran, Islamic Republic of",
-      cuisine: ["Iran, Islamic Republic of"]
+      cuisine: [
+        "Iran",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
     },
-    { countryMatch: "Iraq", cuisine: ["Iraq"] },
+    {
+      countryMatch: "Iraq",
+      cuisine: [
+        "Iraq",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     { countryMatch: "Ireland", cuisine: ["Ireland"] },
     { countryMatch: "Isle of Man", cuisine: ["Isle of Man"] },
     {
       countryMatch: "Israel",
-      cuisine: ["Israel", "Falafel", "Hummus", "Shwarma", "Shakshooka"]
+      cuisine: [
+        "Israel",
+        "Falafel",
+        "Hummus",
+        "Shwarma",
+        "Shakshooka",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
     },
     {
       countryMatch: "Italy",
@@ -252,8 +328,30 @@ var countryCuisine =
     { countryMatch: "Jamaica", cuisine: ["Jamaica"] },
     { countryMatch: "Japan", cuisine: ["Japan"] },
     { countryMatch: "Jersey", cuisine: ["Jersey"] },
-    { countryMatch: "Jordan", cuisine: ["Jordan"] },
-    { countryMatch: "Kazakhstan", cuisine: ["Kazakhstan"] },
+    {
+      countryMatch: "Jordan",
+      cuisine: [
+        "Jordan",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
+    {
+      countryMatch: "Kazakhstan",
+      cuisine: [
+        "Kazakhstan",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     { countryMatch: "Kenya", cuisine: ["Kenya"] },
     { countryMatch: "Kiribati", cuisine: ["Kiribati"] },
     {
@@ -262,19 +360,66 @@ var countryCuisine =
     },
     // { countryMatch: "Korea", cuisine: ["Bokkeum-bap"] },
     { countryMatch: "Kosovo", cuisine: ["Kosovo"] },
-    { countryMatch: "Kuwait", cuisine: ["Kuwait"] },
-    { countryMatch: "Kyrgyzstan", cuisine: ["Kyrgyzstan"] },
+    {
+      countryMatch: "Kuwait",
+      cuisine: [
+        "Kuwait",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
+    {
+      countryMatch: "Kyrgyzstan",
+      cuisine: [
+        "Kyrgyzstan",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     {
       countryMatch: "Lao People's Democratic Republic",
       cuisine: ["Lao People's Democratic Republic"]
     },
     { countryMatch: "Latvia", cuisine: ["Latvia"] },
-    { countryMatch: "Lebanon", cuisine: ["Lebanon"] },
+    {
+      countryMatch: "Lebanon",
+      cuisine: [
+        "Lebanon",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     { countryMatch: "Lesotho", cuisine: ["Lesotho"] },
     { countryMatch: "Liberia", cuisine: ["Liberia"] },
-    { countryMatch: "Libya", cuisine: ["Libya"] },
+    {
+      countryMatch: "Libya",
+      cuisine: [
+        "Libya",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     { countryMatch: "Liechtenstein", cuisine: ["Liechtenstein"] },
-    { countryMatch: "Lithuania", cuisine: ["Lithuania"] },
+    {
+      countryMatch: "Lithuania",
+      cuisine: ["Lithuania", "potato pancake", "cold beet soup"]
+    },
     { countryMatch: "Luxembourg", cuisine: ["Luxembourg"] },
     { countryMatch: "Macao", cuisine: ["Macao"] },
     {
@@ -336,7 +481,18 @@ var countryCuisine =
       cuisine: ["Northern Mariana Islands"]
     },
     { countryMatch: "Norway", cuisine: ["Norway"] },
-    { countryMatch: "Oman", cuisine: ["Oman"] },
+    {
+      countryMatch: "Oman",
+      cuisine: [
+        "Oman",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     { countryMatch: "Pakistan", cuisine: ["Pakistan"] },
     { countryMatch: "Palau", cuisine: ["Palau"] },
     {
@@ -355,7 +511,18 @@ var countryCuisine =
     { countryMatch: "Poland", cuisine: ["Poland"] },
     { countryMatch: "Portugal", cuisine: ["Portugal"] },
     { countryMatch: "Puerto Rico", cuisine: ["Puerto Rico"] },
-    { countryMatch: "Qatar", cuisine: ["Qatar"] },
+    {
+      countryMatch: "Qatar",
+      cuisine: [
+        "Qatar",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     { countryMatch: "Réunion", cuisine: ["Réunion"] },
     { countryMatch: "Romania", cuisine: ["Romania"] },
     {
@@ -400,7 +567,19 @@ var countryCuisine =
       countryMatch: "Sao Tome and Principe",
       cuisine: ["Sao Tome and Principe"]
     },
-    { countryMatch: "Saudi Arabia", cuisine: ["Saudi Arabia", "Mandi"] },
+    {
+      countryMatch: "Saudi Arabia",
+      cuisine: [
+        "Saudi Arabia",
+        "Mandi",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     { countryMatch: "Senegal", cuisine: ["Senegal"] },
     { countryMatch: "Serbia", cuisine: ["Serbia"] },
     { countryMatch: "Seychelles", cuisine: ["Seychelles"] },
@@ -447,7 +626,18 @@ var countryCuisine =
     { countryMatch: "Swaziland", cuisine: ["Swaziland"] },
     { countryMatch: "Sweden", cuisine: ["Sweden"] },
     { countryMatch: "Switzerland", cuisine: ["Switzerland"] },
-    { countryMatch: "Syrian Arab Republic", cuisine: ["Syrian Arab Republic"] },
+    {
+      countryMatch: "Syrian Arab Republic",
+      cuisine: [
+        "Syria",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     {
       countryMatch: "Taiwan, Province of China",
       cuisine: ["Taiwan, Province of China"]
@@ -464,7 +654,18 @@ var countryCuisine =
     { countryMatch: "Tonga", cuisine: ["Tonga"] },
     { countryMatch: "Trinidad and Tobago", cuisine: ["Trinidad and Tobago"] },
     { countryMatch: "Tunisia", cuisine: ["Tunisia"] },
-    { countryMatch: "Turkey", cuisine: ["Turkey"] },
+    {
+      countryMatch: "Turkey",
+      cuisine: [
+        "Turkey",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     { countryMatch: "Turkmenistan", cuisine: ["Turkmenistan"] },
     {
       countryMatch: "Turks and Caicos Islands",
@@ -473,7 +674,18 @@ var countryCuisine =
     { countryMatch: "Tuvalu", cuisine: ["Tuvalu"] },
     { countryMatch: "Uganda", cuisine: ["Uganda"] },
     { countryMatch: "Ukraine", cuisine: ["Ukraine"] },
-    { countryMatch: "United Arab Emirates", cuisine: ["United Arab Emirates"] },
+    {
+      countryMatch: "United Arab Emirates",
+      cuisine: [
+        "Arab",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     { countryMatch: "United Kingdom", cuisine: ["United Kingdom"] },
     { countryMatch: "United States", cuisine: ["United States"] },
     {
@@ -495,7 +707,18 @@ var countryCuisine =
     { countryMatch: "Virgin Islands, U.S.", cuisine: ["Virgin Islands, U.S."] },
     { countryMatch: "Wallis and Futuna", cuisine: ["Wallis and Futuna"] },
     { countryMatch: "Western Sahara", cuisine: ["Western Sahara"] },
-    { countryMatch: "Yemen", cuisine: ["Yemen"] },
+    {
+      countryMatch: "Yemen",
+      cuisine: [
+        "Yemen",
+        "fattoush",
+        "hummus",
+        "tabbouleh",
+        "falafel",
+        "shawarma",
+        "biryani"
+      ]
+    },
     {
       countryMatch: "Zambia",
       cuisine: ["pumpkin leaves", "mealie meal", "okra"]

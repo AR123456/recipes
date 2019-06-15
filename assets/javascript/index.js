@@ -39,12 +39,12 @@ function enter(country) {
   // also look at using a named function for the call back like in the d3 tooltip example from the advancd web dev course
   // console.log("on mouse over country name ", country.name);
   addEventListener("click", function() {
-    console.log("first click");
+    // console.log("first click");
     stopRotation();
     addEventListener("click", function() {
       // this is finding the clicked on counter and logs the correct id of that country
       // stopRotation();
-      console.log("you are inside the second on click event");
+      // console.log("you are inside the second on click event");
       getRecipeCountry();
     });
 
